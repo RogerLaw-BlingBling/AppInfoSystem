@@ -93,4 +93,36 @@ public class User {
     public void setModifyDate(Date modifyDate) {
         this.modifyDate = modifyDate;
     }
+
+    public User(int id, String devCode, String devName, String devPassword, String devEmail, String devInfo, int createdBy, Date creationDate, int modifyBy, Date modifyDate) {
+        this.id = id;
+        this.devCode = devCode;
+        this.devName = devName;
+        this.devPassword = devPassword;
+        this.devEmail = devEmail;
+        this.devInfo = devInfo;
+        this.createdBy = createdBy;
+        this.creationDate = creationDate;
+        this.modifyBy = modifyBy;
+        this.modifyDate = modifyDate;
+    }
+
+    public User() {
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", devCode='" + devCode + '\'' +
+                ", devName='" + devName + '\'' +
+                ", devPassword='" + devPassword + '\'' +
+                ", devEmail='" + devEmail + '\'' +
+                ", devInfo='" + devInfo + '\'' +
+                ", createdBy=" + createdBy +
+                ", creationDate=" + creationDate +
+                ", modifyBy=" + modifyBy +
+                ", modifyDate=" + modifyDate +
+                '}';
+    }
 }

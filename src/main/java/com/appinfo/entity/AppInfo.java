@@ -229,6 +229,80 @@ public class AppInfo {
     public void setModifyDate(Date modifyDate) {
         this.modifyDate = modifyDate;
     }
+
+    public AppInfo(Integer id, String softwareName, String APKName, String supportROM, String interfaceLanguage, Date updateDate, BigDecimal softwareSize, Integer devId, String appInfo, Integer status, Date onSaleDate, Date offSaleDate, Integer categoryLevel3, Integer downloads, Integer flatformId, Integer createdBy, Date creationDate, Integer modifyBy, Date modifyDate, String statusName, String flatformName, String categoryLevel3Name, String devName, Integer categoryLevel1, Integer categoryLevel2, String categoryLevel1Name, String categoryLevel2Name, String logoPicPath, String logoLocPath, Integer versionId, String versionNo) {
+        this.id = id;
+        this.softwareName = softwareName;
+        this.APKName = APKName;
+        this.supportROM = supportROM;
+        this.interfaceLanguage = interfaceLanguage;
+        this.updateDate = updateDate;
+        this.softwareSize = softwareSize;
+        this.devId = devId;
+        this.appInfo = appInfo;
+        this.status = status;
+        this.onSaleDate = onSaleDate;
+        this.offSaleDate = offSaleDate;
+        this.categoryLevel3 = categoryLevel3;
+        this.downloads = downloads;
+        this.flatformId = flatformId;
+        this.createdBy = createdBy;
+        this.creationDate = creationDate;
+        this.modifyBy = modifyBy;
+        this.modifyDate = modifyDate;
+        this.statusName = statusName;
+        this.flatformName = flatformName;
+        this.categoryLevel3Name = categoryLevel3Name;
+        this.devName = devName;
+        this.categoryLevel1 = categoryLevel1;
+        this.categoryLevel2 = categoryLevel2;
+        this.categoryLevel1Name = categoryLevel1Name;
+        this.categoryLevel2Name = categoryLevel2Name;
+        this.logoPicPath = logoPicPath;
+        this.logoLocPath = logoLocPath;
+        this.versionId = versionId;
+        this.versionNo = versionNo;
+    }
+
+    public AppInfo() {
+    }
+
+    @Override
+    public String toString() {
+        return "AppInfo{" +
+                "id=" + id +
+                ", softwareName='" + softwareName + '\'' +
+                ", APKName='" + APKName + '\'' +
+                ", supportROM='" + supportROM + '\'' +
+                ", interfaceLanguage='" + interfaceLanguage + '\'' +
+                ", updateDate=" + updateDate +
+                ", softwareSize=" + softwareSize +
+                ", devId=" + devId +
+                ", appInfo='" + appInfo + '\'' +
+                ", status=" + status +
+                ", onSaleDate=" + onSaleDate +
+                ", offSaleDate=" + offSaleDate +
+                ", categoryLevel3=" + categoryLevel3 +
+                ", downloads=" + downloads +
+                ", flatformId=" + flatformId +
+                ", createdBy=" + createdBy +
+                ", creationDate=" + creationDate +
+                ", modifyBy=" + modifyBy +
+                ", modifyDate=" + modifyDate +
+                ", statusName='" + statusName + '\'' +
+                ", flatformName='" + flatformName + '\'' +
+                ", categoryLevel3Name='" + categoryLevel3Name + '\'' +
+                ", devName='" + devName + '\'' +
+                ", categoryLevel1=" + categoryLevel1 +
+                ", categoryLevel2=" + categoryLevel2 +
+                ", categoryLevel1Name='" + categoryLevel1Name + '\'' +
+                ", categoryLevel2Name='" + categoryLevel2Name + '\'' +
+                ", logoPicPath='" + logoPicPath + '\'' +
+                ", logoLocPath='" + logoLocPath + '\'' +
+                ", versionId=" + versionId +
+                ", versionNo='" + versionNo + '\'' +
+                '}';
+    }
 }
 
 
