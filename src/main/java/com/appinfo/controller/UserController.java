@@ -9,6 +9,6 @@ public class UserController {
 
     @RequestMapping(value = "/login.html")
     public String login(){
-        return "/userlogin.jsp";
+        return "userlogin";
     }
 }
