@@ -54,10 +54,10 @@
     </bean>
 
     <!-- 配置静态文件 -->
-<<<<<<< HEAD
+
     <mvc:resources location="/js/" mapping="/js/**" />
-=======
+
     <!--<mvc:resources location="/statics/" mapping="/statics/**" />-->
->>>>>>> 8ac605a9347f62c41cbfc306408454b7c886ecd1
+
 
 </beans>
