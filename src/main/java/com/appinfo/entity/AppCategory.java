@@ -2,7 +2,6 @@ package com.appinfo.entity;
 
 import java.util.Date;
 
-
 public class AppCategory {
 
     private Integer id;
@@ -90,19 +89,5 @@ public class AppCategory {
     }
 
     public AppCategory() {
-    }
-
-    @Override
-    public String toString() {
-        return "AppCategory{" +
-                "id=" + id +
-                ", categoryCode='" + categoryCode + '\'' +
-                ", categoryName='" + categoryName + '\'' +
-                ", parentId=" + parentId +
-                ", createdBy=" + createdBy +
-                ", creationTime=" + creationTime +
-                ", modifyBy=" + modifyBy +
-                ", modifyDate=" + modifyDate +
-                '}';
     }
 }
