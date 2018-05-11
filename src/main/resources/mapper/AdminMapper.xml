@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.appinfo.dao.AdminDao">
+
+
+    <!--<select id="findUserByLoginInfo" resultType="User" parameterType="string">-->
+        <!--SELECT loginname,password FROM huar.user WHERE loginname=#{loginname} and password=#{password}-->
+    <!--</select>-->
+
+    <!--<select id="queryById" resultType="User" parameterType="int">-->
+        <!--SELECT * FROM huar.user WHERE userId=#{userId}-->
+    <!--</select>-->
+
+</mapper>
