@@ -1,6 +1,4 @@
-package com.appinfo.controller;/**
-
- */
+package com.appinfo.controller;
 
 /**
  * @author: Huar

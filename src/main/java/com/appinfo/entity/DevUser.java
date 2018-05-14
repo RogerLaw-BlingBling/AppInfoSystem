@@ -2,6 +2,10 @@ package com.appinfo.entity;
 
 import java.util.Date;
 
+/**
+ * @author yyh
+ * 开发者用户实体类
+ */
 public class DevUser {
 
     private int id;

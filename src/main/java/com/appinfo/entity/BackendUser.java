@@ -2,6 +2,11 @@ package com.appinfo.entity;
 
 import java.util.Date;
 
+/**
+ * @author rogerlaw
+ * 后台管理员
+ */
+
 public class BackendUser {
 
     private Integer id;
