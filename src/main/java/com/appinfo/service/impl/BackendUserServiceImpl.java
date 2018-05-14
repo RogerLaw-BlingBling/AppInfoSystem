@@ -11,8 +11,8 @@ import javax.annotation.Resource;
  * @Date: Created in 2018/5/14 23:16
  */
 
-@Service("backendService")
-public class BackendServiceImpl {
+@Service("backendUserService")
+public class BackendUserServiceImpl {
 
     @Resource(name = "backendUserDao")
     private BackendUserDao backendUserDao;
