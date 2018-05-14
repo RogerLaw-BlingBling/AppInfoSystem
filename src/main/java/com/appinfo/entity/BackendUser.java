@@ -17,7 +17,7 @@ public class BackendUser {
     private Date creationDate;
     private Integer modifyBy;//更新者
     private Date modifyDate;//更新时间
-    private String userTypeName;//用户角色类型名称
+    private String userPassword;//用户密码
 
     public Integer getId() {
         return id;
@@ -83,15 +83,15 @@ public class BackendUser {
         this.modifyDate = modifyDate;
     }
 
-    public String getUserTypeName() {
-        return userTypeName;
+    public String getUserPassword() {
+        return userPassword;
     }
 
-    public void setUserTypeName(String userTypeName) {
-        this.userTypeName = userTypeName;
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 
-    public BackendUser(Integer id, String userCode, String userName, Integer userType, Integer createdBy, Date creationDate, Integer modifyBy, Date modifyDate, String userTypeName) {
+    public BackendUser(Integer id, String userCode, String userName, Integer userType, Integer createdBy, Date creationDate, Integer modifyBy, Date modifyDate, String userPassword) {
         this.id = id;
         this.userCode = userCode;
         this.userName = userName;
@@ -100,7 +100,7 @@ public class BackendUser {
         this.creationDate = creationDate;
         this.modifyBy = modifyBy;
         this.modifyDate = modifyDate;
-        this.userTypeName = userTypeName;
+        this.userPassword = userPassword;
     }
 
     public BackendUser() {
@@ -117,7 +117,7 @@ public class BackendUser {
                 ", creationDate=" + creationDate +
                 ", modifyBy=" + modifyBy +
                 ", modifyDate=" + modifyDate +
-                ", userTypeName='" + userTypeName + '\'' +
+                ", userPassword='" + userPassword + '\'' +
                 '}';
     }
 }
