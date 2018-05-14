@@ -39,7 +39,7 @@ public class DevUserController {
                           @RequestParam String devPassword,
                           HttpSession session,
                           HttpServletRequest request)throws Exception{
-           DevUser devUser =devUserService.findUserbydevCode(devCode);
+           DevUser devUser =devUserService.findDevUserbydevCode(devCode);
          if(devUser!=null && devUser.getDevPassword().equals(devPassword)){
             //登录成功
             //用户对象存session
