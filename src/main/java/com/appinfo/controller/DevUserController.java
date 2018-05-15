@@ -12,8 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 /**
  * @author: yyh
-
- **/
+ */
 @Controller
 @RequestMapping(value="/user")
 public class DevUserController {

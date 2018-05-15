@@ -2,6 +2,7 @@ package com.appinfo.service.impl;
 
 import com.appinfo.dao.BackendUserDao;
 import com.appinfo.entity.BackendUser;
+import com.appinfo.service.BackendUserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -12,7 +13,7 @@ import javax.annotation.Resource;
  */
 
 @Service("backendUserService")
-public class BackendUserServiceImpl {
+public class BackendUserServiceImpl implements BackendUserService {
 
     @Resource(name = "backendUserDao")
     private BackendUserDao backendUserDao;
@@ -21,10 +22,10 @@ public class BackendUserServiceImpl {
         BackendUser backend = null;
         try {
             backend = backendUserDao.getBenkendLogin(userCode);
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        // 匹配密碼
+        // 匹配密码
         if (null != backend) {
             if (!backend.getUserPassword().equals(userPassword)) {
                 backend = null;
