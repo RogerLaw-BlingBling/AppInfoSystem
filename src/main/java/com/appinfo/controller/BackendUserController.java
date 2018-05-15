@@ -27,7 +27,7 @@ public class BackendUserController {
     @RequestMapping(value = "/backendlogin")
     public String login() {
         log.info("进入后台管理");
-        return "backend/main";
+        return "/backendlogin";
     }
 
 
@@ -37,10 +37,10 @@ public class BackendUserController {
         log.info("执行登陆流程");
         log.info(userCode + "和" + userPassword);
         BackendUser backendUser = backendUserService.getBackendLogin(userCode, userPassword);
-        if (backendUser != null && backendUser.getUserPassword().equals(userCode)) {
-
+//        if (backendUser != null && backendUser.getUserPassword().equals(userPassword)) {
+        if (null!=backendUser) {
             session.setAttribute("backenUser", backendUser);
-            return "backendlogin";
+            return "backend/main";
 
         } else {
             session.setAttribute("error", "账号或密码不对");
