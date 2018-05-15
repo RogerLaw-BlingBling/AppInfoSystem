@@ -6,9 +6,9 @@ import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
  */
 
 @Controller
-@RequestMapping("/Backend")
+@RequestMapping(value="/Backend")
 public class BackendUserController {
     private Logger log = Logger.getLogger(BackendUserController.class);
 
@@ -27,24 +27,26 @@ public class BackendUserController {
     @RequestMapping(value = "/backendlogin")
     public String login() {
         log.info("进入后台管理");
-        return "backend/main";
+        return "backendlogin";
     }
 
 
     //登陆
-    @RequestMapping(value = "/doLogin", method = RequestMethod.POST)
-    public String doLogin(String userCode, String userPassword, HttpSession session, HttpServletRequest request) {
+    @RequestMapping(value = "/doLogin.do", method = RequestMethod.POST)
+    public String doLogin(@RequestParam(value ="userCode") String userCode,
+                          @RequestParam(value = "userPassword") String userPassword,
+                          HttpSession session) {
         log.info("执行登陆流程");
         log.info(userCode + "和" + userPassword);
-        BackendUser backendUser = backendUserService.getBackendLogin(userCode, userPassword);
-        if (backendUser != null && backendUser.getUserPassword().equals(userCode)) {
+        BackendUser backendUser = backendUserService.getBackendLogin(userCode);
+        if (backendUser != null && backendUser.getUserPassword().equals(userPassword)) {
 
             session.setAttribute("backenUser", backendUser);
-            return "backendlogin";
+            return "backend/main";
 
         } else {
             session.setAttribute("error", "账号或密码不对");
-            return "/backendlogin";
+            return "backendlogin";
         }
     }
 

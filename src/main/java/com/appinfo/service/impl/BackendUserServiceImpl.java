@@ -18,7 +18,7 @@ public class BackendUserServiceImpl implements BackendUserService {
     @Resource(name = "backendUserDao")
     private BackendUserDao backendUserDao;
 
-    public BackendUser getBackendLogin(String userCode, String userPassword) {
+    public BackendUser getBackendLogin(String userCode) {
         BackendUser backend = null;
         try {
             backend = backendUserDao.getBenkendLogin(userCode);
@@ -26,11 +26,11 @@ public class BackendUserServiceImpl implements BackendUserService {
             e.printStackTrace();
         }
         // 匹配密码
-        if (null != backend) {
+       /* if (null != backend) {
             if (!backend.getUserPassword().equals(userPassword)) {
                 backend = null;
             }
-        }
+        }*/
         return backend;
     }
 }

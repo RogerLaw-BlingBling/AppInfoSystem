@@ -8,5 +8,5 @@ import com.appinfo.entity.BackendUser;
  */
 public interface BackendUserService {
 
-    BackendUser getBackendLogin(String userCode, String userPassword);//后台管理登陆
+    BackendUser getBackendLogin(String userCode);//后台管理登陆
 }
