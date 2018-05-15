@@ -27,7 +27,7 @@ public class BackendUserController {
     @RequestMapping(value = "/backendlogin")
     public String login() {
         log.info("进入后台管理");
-        return "backendlogin";
+        return "backend/main";
     }
 
 
@@ -40,7 +40,7 @@ public class BackendUserController {
         if (backendUser != null && backendUser.getUserPassword().equals(userCode)) {
 
             session.setAttribute("backenUser", backendUser);
-            return "success";
+            return "backendlogin";
 
         } else {
             session.setAttribute("error", "账号或密码不对");
@@ -52,7 +52,7 @@ public class BackendUserController {
     @RequestMapping(value = "/logout")
     public String logout(HttpSession session) {
         session.removeAttribute("backendUser");
-        return "backendlogin";
+        return "redirect:../index.jsp";
     }
 
 }

@@ -55,9 +55,10 @@
 
     <!-- 配置静态文件 -->
 
-    <mvc:resources location="/js/" mapping="/js/**" />
+    <!-- 仔仔注释掉的 -->
+    <!--<mvc:resources location="/js/" mapping="/js/**" />-->
 
-    <!--<mvc:resources location="/statics/" mapping="/statics/**" />-->
+    <mvc:resources location="/statics/" mapping="/statics/**" />
 
 
 </beans>

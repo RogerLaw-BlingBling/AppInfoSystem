@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
  * @author: yyh
  */
 @Controller
-@RequestMapping(value="/user")
+@RequestMapping(value="/DevUser")
 public class DevUserController {
 
     private Logger logger = Logger.getLogger(DevUserController.class);
@@ -30,12 +30,13 @@ public class DevUserController {
         this.devUserService = devUserService;
     }
 
-    @RequestMapping(value = "/login.html")
+    @RequestMapping(value = "/devlogin")
     public String login(){
-        return "devuserlogin";
+        return "/devlogin";
     }
 
 
+    //这下面我没改，我只是让请求页面能跳转
     @RequestMapping(value = "/dologin.html")
     public String dologin(@RequestParam String devCode,
                           @RequestParam String devPassword,
