@@ -36,26 +36,26 @@ public class DevUserController {
     }
 
 
-    //这下面我没改，我只是让请求页面能跳转
-    @RequestMapping(value = "/dologin.html")
+
+    @RequestMapping(value = "/dologin")
     public String dologin(@RequestParam String devCode,
                           @RequestParam String devPassword,
                           HttpSession session,
                           HttpServletRequest request)throws Exception{
-        logger.debug("1111");
+
         DevUser devUser =devUserService.findDevUserbydevCode(devCode);
         if(devUser!=null && devUser.getDevPassword().equals(devPassword)){
             //登录成功
             //用户对象存session
             session.setAttribute("devUser", devUser);
             logger.debug("登录成功...."+devCode+"\t"+devPassword);
-            return "devmain";
+            return "developer/main";
         }else{
             //登录失败
             logger.debug("登录失败...."+devCode+"\t"+devPassword);
             //model.addAttribute("msg", "用户名或密码不正确！");
             request.setAttribute("msg", "用户名或密码不正确！");
-            return "devuserlogin";
+            return "/devlogin";
         }
 
     }
@@ -64,7 +64,7 @@ public class DevUserController {
     public String logout(HttpSession session,
                          HttpServletRequest request)throws Exception{
         session.removeAttribute("devUser");
-        return "devuserlogin";
+        return "/devlogin";
     }
 
 }
