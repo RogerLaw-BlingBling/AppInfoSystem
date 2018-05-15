@@ -7,16 +7,16 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
-//仔仔加的
+
 @Service("devUserService")
 public class DevUserServiceImpl implements DevUserService {
 
-     @Resource
-     private DevUserDao userMapper;
+    @Resource(name="devuserDao")
+    private DevUserDao devuserDao;
 
 
     @Override
     public DevUser findDevUserbydevCode(String devCode) {
-        return userMapper.getBydevCode(devCode);
+        return devuserDao.getBydevCode(devCode);
     }
 }

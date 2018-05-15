@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+/**
+ * @author: yyh
 
+ **/
 @Controller
 @RequestMapping(value="/user")
 public class DevUserController {
@@ -39,8 +42,9 @@ public class DevUserController {
                           @RequestParam String devPassword,
                           HttpSession session,
                           HttpServletRequest request)throws Exception{
-           DevUser devUser =devUserService.findDevUserbydevCode(devCode);
-         if(devUser!=null && devUser.getDevPassword().equals(devPassword)){
+        logger.debug("1111");
+        DevUser devUser =devUserService.findDevUserbydevCode(devCode);
+        if(devUser!=null && devUser.getDevPassword().equals(devPassword)){
             //登录成功
             //用户对象存session
             session.setAttribute("devUser", devUser);
@@ -58,8 +62,8 @@ public class DevUserController {
 
     @RequestMapping(value = "/logout")
     public String logout(HttpSession session,
-                          HttpServletRequest request)throws Exception{
-       session.removeAttribute("devUser");
+                         HttpServletRequest request)throws Exception{
+        session.removeAttribute("devUser");
         return "devuserlogin";
     }
 

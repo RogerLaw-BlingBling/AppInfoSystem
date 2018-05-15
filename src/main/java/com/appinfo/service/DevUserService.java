@@ -1,7 +1,7 @@
 package com.appinfo.service;
 
-        import com.appinfo.entity.DevUser;
+import com.appinfo.entity.DevUser;
 
 public interface DevUserService {
-    DevUser findDevUserbydevCode(String devCode);
+    DevUser findDevUserbydevCode(String devCode);//用户登录
 }
