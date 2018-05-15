@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -35,26 +36,25 @@ public class BackendUserController {
     @RequestMapping(value = "/doLogin", method = RequestMethod.POST)
     public String doLogin(@RequestParam(value = "userCode") String userCode,
                           @RequestParam(value = "userPassword") String userPassword,
-                          HttpSession session){log.info("执行登陆流程");
+                          HttpSession session, HttpServletRequest request) {
+        log.info("执行登陆流程");
         log.info(userCode + "和" + userPassword);
         BackendUser backendUser = backendUserService.getBackendLogin(userCode, userPassword);
         if (null != backendUser) {
-            if (backendUser != null && backendUser.getUserPassword().equals(userPassword)) {
 
-                session.setAttribute("backenUser", backendUser);
-                return "backend/main";
+            session.setAttribute("backenUser", backendUser);
+            return "backend/main";
 
-            } else {
-                session.setAttribute("error", "账号或密码不对");
-                return "backendlogin";
-            }
+        } else {
+            request.setAttribute("error", "账号或密码不对");
+            return "/backendlogin";
         }
-        return null;
+
     }
+
     //注销
-    @RequestMapping(value="/loginOut")
-    public String loginOut(HttpSession session)
-    {
+    @RequestMapping(value = "/loginOut")
+    public String loginOut(HttpSession session) {
         session.removeAttribute("backenUser");
         return "redirect:../index.jsp";
     }

@@ -19,12 +19,9 @@ public class BackendUserServiceImpl implements BackendUserService {
     private BackendUserDao backendUserDao;
 
     public BackendUser getBackendLogin(String userCode, String userPassword) {
-        BackendUser backend = null;
-        try {
-            backend = backendUserDao.getBenkendLogin(userCode);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
+        BackendUser backend = backendUserDao.getBenkendLogin(userCode);
+
         // 匹配密码
         if (null != backend) {
             if (!backend.getUserPassword().equals(userPassword)) {
