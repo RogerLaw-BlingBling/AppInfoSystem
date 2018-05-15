@@ -32,7 +32,11 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
+<<<<<<< HEAD
             <form action="/Backend/doLogin" method="post">
+=======
+            <form action="doLogin.do" method="post">
+>>>>>>> 0bcc262ec19fd785394d24a0bc5f71c670250c02
               <h1>后台管理系统</h1>
               <div>
                 <input type="text" class="form-control" name="userCode" placeholder="请输入用户名" required="" />
