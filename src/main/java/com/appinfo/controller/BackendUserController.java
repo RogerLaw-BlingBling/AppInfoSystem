@@ -58,4 +58,10 @@ public class BackendUserController {
         session.removeAttribute("backenUser");
         return "redirect:../index.jsp";
     }
+
+    //跳转到app维护
+    @RequestMapping(value = "/appinfolist")
+    public String appinfolist(){
+        return "backend/applist";
+    }
 }
