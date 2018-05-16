@@ -36,7 +36,7 @@ public class BackendUserController {
     @RequestMapping(value = "/doLogin", method = RequestMethod.POST)
     public String doLogin(@RequestParam(value = "userCode") String userCode,
                           @RequestParam(value = "userPassword") String userPassword,
-                          HttpSession session, HttpServletRequest request) {
+                          HttpSession session, HttpServletRequest request) throws Exception{
         log.info("执行登陆流程");
         log.info(userCode + "和" + userPassword);
         BackendUser backendUser = backendUserService.getBackendLogin(userCode, userPassword);
