@@ -105,85 +105,85 @@
         </if>
     </select>
     <insert id="addAppinfo" parameterType="AppInfo">
-        insert into app_info
-        (softwareName,APKName,supportROM,interfaceLanguage,updateDate,softwareSize,
-        devId,appInfo,status,onSaleDate,offSaleDate,categoryLevel1,categoryLevel2,
-        categoryLevel3,downloads,flatformId,logoPicPath,logoLocPath,createdBy,creationDate)
-        values(#{softwareName},#{APKName},#{supportROM},#{interfaceLanguage},#{updateDate},
-        #{softwareSize},#{devId},#{appInfo},#{status},#{onSaleDate},#{offSaleDate},
-        #{categoryLevel1},#{categoryLevel2},#{categoryLevel3},#{downloads},
-        #{flatformId},#{logoPicPath},#{logoLocPath},#{createdBy},#{creationDate})
-    </insert>
+		insert into app_info
+		(softwareName,APKName,supportROM,interfaceLanguage,updateDate,softwareSize,
+		devId,appInfo,status,onSaleDate,offSaleDate,categoryLevel1,categoryLevel2,
+		categoryLevel3,downloads,flatformId,logoPicPath,logoLocPath,createdBy,creationDate)
+		values(#{softwareName},#{APKName},#{supportROM},#{interfaceLanguage},#{updateDate},
+		#{softwareSize},#{devId},#{appInfo},#{status},#{onSaleDate},#{offSaleDate},
+		#{categoryLevel1},#{categoryLevel2},#{categoryLevel3},#{downloads},
+		#{flatformId},#{logoPicPath},#{logoLocPath},#{createdBy},#{creationDate})
+	</insert>
     <select id="getAppFind" resultType="AppInfo">
-        SELECT * ,(SELECT devName FROM dev_user WHERE id = a.devId) AS
-        devName,
-        (SELECT valueName FROM data_dictionary d WHERE
-        a.status=d.valueId AND d.typeCode='APP_STATUS') AS statusName,
-        (SELECT
-        valueName FROM data_dictionary d WHERE a.status=d.valueId AND
-        d.typeCode='APP_FLATFORM') AS flatformName,
-        (SELECT categoryName FROM
-        app_category c WHERE c.id=a.categoryLevel1) AS categoryLevel1Name,
-        (SELECT categoryName FROM app_category c WHERE c.id=a.categoryLevel2)
-        AS categoryLevel2Name,
-        (SELECT categoryName FROM app_category c WHERE
-        c.id=a.categoryLevel3) AS categoryLevel3Name,
-        (SELECT v.versionNo FROM
-        app_version v WHERE v.id=a.versionId ) AS versionNo
-        FROM app_info a
-        WHERE 1=1
-        AND a.id=#{id}
-    </select>
+		SELECT * ,(SELECT devName FROM dev_user WHERE id = a.devId) AS
+		devName,
+		(SELECT valueName FROM data_dictionary d WHERE
+		a.status=d.valueId AND d.typeCode='APP_STATUS') AS statusName,
+		(SELECT
+		valueName FROM data_dictionary d WHERE a.status=d.valueId AND
+		d.typeCode='APP_FLATFORM') AS flatformName,
+		(SELECT categoryName FROM
+		app_category c WHERE c.id=a.categoryLevel1) AS categoryLevel1Name,
+		(SELECT categoryName FROM app_category c WHERE c.id=a.categoryLevel2)
+		AS categoryLevel2Name,
+		(SELECT categoryName FROM app_category c WHERE
+		c.id=a.categoryLevel3) AS categoryLevel3Name,
+		(SELECT v.versionNo FROM
+		app_version v WHERE v.id=a.versionId ) AS versionNo
+		FROM app_info a
+		WHERE 1=1
+			AND a.id=#{id}
+	</select>
     <update id="updateVersionId" parameterType="Integer">
-        UPDATE app_info SET versionId=#{VerSionId}
-        WHERE id=#{pid}
-    </update>
+		UPDATE app_info SET versionId=#{VerSionId}
+		WHERE id=#{pid}
+	</update>
     <delete id="deleteAppinfo" parameterType="Integer">
-        DELETE FROM `appinfodb`.`app_info`
-        WHERE
-        `id` =#{id}
-    </delete>
+		DELETE FROM `appinfodb`.`app_info`
+		WHERE
+		`id` =#{id}
+	</delete>
 
     <delete id="deleteAppVersion" parameterType="Integer">
-        DELETE FROM `appinfodb`.`app_version`
-        WHERE
-        `appId` =#{appid}
-    </delete>
+		DELETE FROM `appinfodb`.`app_version`
+		WHERE
+		`appId` =#{appid}
+	</delete>
 
     <update id="updateAppinfo" parameterType="AppInfo">
-        UPDATE `appinfodb`.`app_info`
-        SET
-        `softwareName` = #{softwareName},
-        `APKName` = #{APKName},
-        `supportROM` =#{supportROM},
-        `interfaceLanguage` =#{interfaceLanguage},
-        `softwareSize` =#{softwareSize},
-        `updateDate` =#{updateDate},
-        `devId` =#{devId},
-        `appInfo` =#{appInfo},
-        `status` =#{status},
-        `onSaleDate` =#{onSaleDate},
-        `offSaleDate` =#{offSaleDate},
-        `flatformId` =#{flatformId},
-        `categoryLevel3` =#{categoryLevel3},
-        `downloads` =#{downloads},
-        `createdBy` =#{createdBy},
-        `creationDate` =#{creationDate},
-        `modifyBy` =#{modifyBy},
-        `modifyDate` =#{modifyDate},
-        `categoryLevel1` =#{categoryLevel1},
-        `categoryLevel2` =#{categoryLevel2},
-        `logoPicPath` =#{logoPicPath},
-        `logoLocPath` =#{logoLocPath},
-        `versionId` =#{versionId}
-        WHERE `id` =#{id};
-    </update>
+	UPDATE `appinfodb`.`app_info`
+	SET
+	`softwareName` = #{softwareName},
+	`APKName` = #{APKName},
+	`supportROM` =#{supportROM},
+	`interfaceLanguage` =#{interfaceLanguage},
+	`softwareSize` =#{softwareSize},
+	`updateDate` =#{updateDate},
+	`devId` =#{devId},
+	`appInfo` =#{appInfo},
+	`status` =#{status},
+	`onSaleDate` =#{onSaleDate},
+	`offSaleDate` =#{offSaleDate},
+	`flatformId` =#{flatformId},
+	`categoryLevel3` =#{categoryLevel3},
+	`downloads` =#{downloads},
+	`createdBy` =#{createdBy},
+	`creationDate` =#{creationDate},
+	`modifyBy` =#{modifyBy},
+	`modifyDate` =#{modifyDate},
+	`categoryLevel1` =#{categoryLevel1},
+	`categoryLevel2` =#{categoryLevel2},
+	`logoPicPath` =#{logoPicPath},
+	`logoLocPath` =#{logoLocPath},
+	`versionId` =#{versionId}
+	WHERE `id` =#{id};
+	</update>
     <update id="updateStatus" parameterType="Integer">
-        UPDATE `appinfodb`.`app_info`
-        SET
-        `status` =#{statu}
-        WHERE
-        `id` =#{appid}
-    </update>
+	UPDATE `appinfodb`.`app_info`
+	SET
+	`status` =#{statu}
+	WHERE
+	`id` =#{appid}
+	</update>
 
 </mapper>

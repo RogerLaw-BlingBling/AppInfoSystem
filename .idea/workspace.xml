@@ -6,13 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="312c8c91-aca6-43ac-873c-aaa5e706bac0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appinfo/dao/AppInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appinfo/dao/AppInfoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appinfo/service/AppInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appinfo/service/AppInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appinfo/service/impl/AppInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appinfo/service/impl/AppInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/appinfo/service/impl/AppVersionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/appinfo/service/impl/AppVersionServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="312c8c91-aca6-43ac-873c-aaa5e706bac0" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppInfoServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AppInfoServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/appinfo/service/impl/AppInfoServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state relative-caret-position="153">
+              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
               <folding>
                 <element signature="e#2495#2496#0" expanded="true" />
                 <element signature="e#2548#2549#0" expanded="true" />
@@ -120,10 +114,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppInfoDao.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AppInfoDao.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/appinfo/dao/AppInfoDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
+            <state relative-caret-position="183">
               <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
             </state>
           </provider>
@@ -511,12 +505,12 @@
       <updated>1526271045733</updated>
       <workItem from="1526271047526" duration="15325000" />
       <workItem from="1526377933883" duration="8690000" />
-      <workItem from="1526395010062" duration="9970000" />
+      <workItem from="1526395010062" duration="10412000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6905000" />
+    <option name="totallyTimeSpent" value="7347000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="972" extended-state="0" />
@@ -525,7 +519,7 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32870865" />
-      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.34737486" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.34737486" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
@@ -540,11 +534,11 @@
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45070422" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.45070422" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32977587" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24481075" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24481075" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -900,13 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/appinfo/dao/AppInfoDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/appinfo/service/impl/DevUserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -936,12 +923,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/appinfo/service/impl/AppInfoServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="153">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
           <folding>
             <element signature="e#2495#2496#0" expanded="true" />
             <element signature="e#2548#2549#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/appinfo/dao/AppInfoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
         </state>
       </provider>
     </entry>
