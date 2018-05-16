@@ -2,9 +2,11 @@ package com.appinfo.dao;
 
 import com.appinfo.entity.AppInfo;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository("appInfoDao")
 public interface AppInfoDao {
 
     public List<AppInfo> appInfoList(@Param("softwareName")String querySoftwareName,
