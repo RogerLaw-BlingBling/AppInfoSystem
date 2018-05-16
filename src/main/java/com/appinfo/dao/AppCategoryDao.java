@@ -14,6 +14,6 @@ import java.util.List;
  **/
 @Repository("appCategoryDao")
 public interface AppCategoryDao {
-    public List<AppCategory> getAppCategoryListByParentId(
+    List<AppCategory> getAppCategoryListByParentId(
             @Param("parentId") Integer parentId) throws Exception;
 }

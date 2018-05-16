@@ -14,7 +14,7 @@ import java.util.List;
  * @author: Huar
  * @create: 2018-05-16 15:02
  **/
-@Service
+@Service("appCategoryService")
 public class AppCategoryServiceImpl implements AppCategoryService {
 
     @Resource
