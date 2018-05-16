@@ -12,11 +12,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/AppInfo")
 public class AppInfoController {
 
-    /*
-    @author:yyh
-    @ app增加功能
-     */
-
-
 
 }
