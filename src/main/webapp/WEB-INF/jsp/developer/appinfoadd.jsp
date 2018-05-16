@@ -8,7 +8,7 @@
       <div class="x_title">
         <h2>
           APP 信息管理维护 <i class="fa fa-user"></i><small>${devUserSession.devName}
-          - 您可以通过搜索或者其他的筛选项对APP的信息进行修改、删除等管理操作。</small>
+          - 1111111111111111111111111111111您可以通过搜索或者其他的筛选项对APP的信息进行修改、删除等管理操作。</small>
         </h2>
         <div class="clearfix"></div>
       </div>

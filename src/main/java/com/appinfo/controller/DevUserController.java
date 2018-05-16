@@ -74,4 +74,16 @@ public class DevUserController {
     public String appinfolist(){
         return "developer/appinfolist";
     }
+
+    //跳转到appinfoadd
+    @RequestMapping(value = "/appinfoadd")
+    public String appinfoadd(){
+        return "developer/appinfoadd";
+    }
+
+    //跳转到appinfomodify
+    @RequestMapping(value = "/appinfomodify")
+    public String appinfomodify(){
+        return "developer/appinfomodify";
+    }
 }
