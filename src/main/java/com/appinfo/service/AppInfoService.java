@@ -10,50 +10,29 @@ import java.util.List;
  **/
 public interface AppInfoService {
 
-    public List<AppInfo> appInfoList(String querySoftwareName,
-                                     Integer queryStatus,
-                                     Integer queryCategoryLevel1,
-                                     Integer queryCategoryLevel2,
-                                     Integer queryCategoryLevel3,
-                                     Integer queryFlatformId,
-                                     Integer devId,
-                                     Integer from,
-                                     Integer pageSize)throws Exception;
+    List<AppInfo> getAppInfoList(String querySoftwareName,
+                                 Integer queryStatus, Integer queryCategoryLevel1,
+                                 Integer queryCategoryLevel2, Integer queryCategoryLevel3,
+                                 Integer queryFlatformId, Integer devId, Integer currentPageNo,
+                                 Integer pageSize) throws Exception;
 
-    public int getAppInfoCount(String querySoftwareName,
-                               Integer queryStatus,
-                               Integer queryCategoryLevel1,
-                               Integer queryCategoryLevel2,
-                               Integer queryCategoryLevel3,
-                               Integer queryFlatformId,
-                               Integer devId)throws Exception;
+    int getAppInfoCount(String querySoftwareName, Integer queryStatus,
+                        Integer queryCategoryLevel1, Integer queryCategoryLevel2,
+                        Integer queryCategoryLevel3, Integer queryFlatformId, Integer devId)
+            throws Exception;
+    /**
+     * 根據id查询app信息
+     */
+    AppInfo getAppinfoId(String id);
+    /**
+     * 新增
+     */
+    boolean addAppinfo(AppInfo in);
 
-    public boolean add(AppInfo appinfo) throws Exception;
+    AppInfo getAppFind(Integer id, String apkName);
+    boolean deleteAppinfo(int id);
+    boolean deleteAppVersion(String id);
 
-    public AppInfo selectAppInfoAPKNameExist(String APKName) throws Exception;
-
-    public boolean modify(AppInfo appinfo) throws Exception;
-
-    public AppInfo getAppInfoById(Integer id) throws Exception;
-
-    public boolean delAppInfoById(Integer id) throws Exception;
-
-    public boolean updatePath(AppInfo appinfo)throws Exception;
-
-
-    public List<AppInfo> appList(String querySoftwareName,
-                                 Integer queryStatus,
-                                 Integer queryCategoryLevel1,
-                                 Integer queryCategoryLevel2,
-                                 Integer queryCategoryLevel3,
-                                 Integer queryFlatformId,
-                                 Integer from,
-                                 Integer pageSize)throws Exception;
-
-    public int getAppCount(String querySoftwareName,
-                           Integer queryStatus,
-                           Integer queryCategoryLevel1,
-                           Integer queryCategoryLevel2,
-                           Integer queryCategoryLevel3,
-                           Integer queryFlatformId)throws Exception;
+    boolean updateAppinfo(AppInfo info);
+    boolean updateStatus(Integer appid, Integer statu);//修改状态
 }

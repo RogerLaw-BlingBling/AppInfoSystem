@@ -2,13 +2,10 @@ package com.appinfo.service.impl;/**
 
  */
 
-import com.appinfo.dao.AppInfoDao;
-import com.appinfo.dao.AppVersionDao;
 import com.appinfo.entity.AppVersion;
 import com.appinfo.service.AppVersionService;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 
 /**
@@ -17,30 +14,19 @@ import java.util.ArrayList;
  **/
 @Service
 public class AppVersionServiceImpl implements AppVersionService {
-
-    @Resource
-    private AppVersionDao appVersionDao;
-    @Resource
-    private AppInfoDao appInfoDao;
-
-
     @Override
     public boolean add(AppVersion appversion) throws Exception {
-        boolean flag = false;
-        if(appVersionDao.appversionadd(appversion) > 0){
-            flag = true;
-        }
-        return flag;
+        return false;
     }
 
     @Override
     public ArrayList<AppVersion> getAppVersionById(Integer appId) throws Exception {
-        return appVersionDao.getAppVersionById(appId);
+        return null;
     }
 
     @Override
     public AppVersion getAppVersionByCon(Integer appId, String versionNo) throws Exception {
-                return appVersionDao.getAppVersionByCon(appId, versionNo);
+        return null;
     }
 
     @Override
@@ -52,34 +38,69 @@ public class AppVersionServiceImpl implements AppVersionService {
     public boolean appversionmodify(AppVersion appversion) throws Exception {
         return false;
     }
+//
+//    @Resource
+//    private AppVersionDao appVersionDao;
+//    @Resource
+//    private AppInfoDao appInfoDao;
+//
+//
+//    @Override
 //    public boolean add(AppVersion appversion) throws Exception {
 //        boolean flag = false;
-//        if(versionMapper.appversionadd(appversion) > 0){
+//        if(appVersionDao.appversionadd(appversion) > 0){
 //            flag = true;
 //        }
 //        return flag;
 //    }
 //
+//    @Override
 //    public ArrayList<AppVersion> getAppVersionById(Integer appId) throws Exception {
-//        // TODO Auto-generated method stub
-//        return versionMapper.getAppVersionById(appId);
+//        return appVersionDao.getAppVersionById(appId);
 //    }
 //
-//    public AppVersion getAppVersionByCon(Integer appId,String versionNo) throws Exception {
-//        // TODO Auto-generated method stub
-//        return versionMapper.getAppVersionByCon(appId, versionNo);
+//    @Override
+//    public AppVersion getAppVersionByCon(Integer appId, String versionNo) throws Exception {
+//                return appVersionDao.getAppVersionByCon(appId, versionNo);
 //    }
 //
+//    @Override
 //    public AppVersion getAppVersionByCom(Integer id) throws Exception {
-//        // TODO Auto-generated method stub
-//        return versionMapper.getAppVersionByCom(id);
+//        return null;
 //    }
 //
+//    @Override
 //    public boolean appversionmodify(AppVersion appversion) throws Exception {
-//        // TODO Auto-generated method stub
-//        boolean flag = false;
-//        if(versionMapper.appversionmodify(appversion) > 0)
-//            flag = true;
-//        return flag;
+//        return false;
 //    }
+////    public boolean add(AppVersion appversion) throws Exception {
+////        boolean flag = false;
+////        if(versionMapper.appversionadd(appversion) > 0){
+////            flag = true;
+////        }
+////        return flag;
+////    }
+////
+////    public ArrayList<AppVersion> getAppVersionById(Integer appId) throws Exception {
+////        // TODO Auto-generated method stub
+////        return versionMapper.getAppVersionById(appId);
+////    }
+////
+////    public AppVersion getAppVersionByCon(Integer appId,String versionNo) throws Exception {
+////        // TODO Auto-generated method stub
+////        return versionMapper.getAppVersionByCon(appId, versionNo);
+////    }
+////
+////    public AppVersion getAppVersionByCom(Integer id) throws Exception {
+////        // TODO Auto-generated method stub
+////        return versionMapper.getAppVersionByCom(id);
+////    }
+////
+////    public boolean appversionmodify(AppVersion appversion) throws Exception {
+////        // TODO Auto-generated method stub
+////        boolean flag = false;
+////        if(versionMapper.appversionmodify(appversion) > 0)
+////            flag = true;
+////        return flag;
+////    }
 }
