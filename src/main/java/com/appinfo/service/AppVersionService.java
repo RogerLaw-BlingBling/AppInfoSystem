@@ -5,6 +5,7 @@ package com.appinfo.service;/**
 import com.appinfo.entity.AppVersion;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author: Huar
@@ -12,13 +13,10 @@ import java.util.ArrayList;
  **/
 
 public interface AppVersionService {
-    boolean add(AppVersion appversion) throws Exception;
+    public boolean addVersion(AppVersion av);//新增
+    public List<AppVersion> getAppVersionId(Integer id);
 
-    ArrayList<AppVersion> getAppVersionById(Integer appId)throws Exception;
+    public AppVersion getVerSionId(Integer id);
 
-    AppVersion getAppVersionByCon(Integer appId, String versionNo)throws Exception;
-
-    AppVersion getAppVersionByCom(Integer id)throws Exception;
-
-    boolean appversionmodify(AppVersion appversion)throws Exception;
+    public boolean updateVersion(AppVersion appVersion);//修改
 }
