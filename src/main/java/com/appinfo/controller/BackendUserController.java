@@ -42,7 +42,7 @@ public class BackendUserController {
         BackendUser backendUser = backendUserService.getBackendLogin(userCode, userPassword);
         if (null != backendUser) {
 
-            session.setAttribute("backenUser", backendUser);
+            session.setAttribute("backendUser", backendUser);
             return "backend/main";
 
         } else {

@@ -56,7 +56,7 @@ public class DevUserController {
             logger.debug("登录失败...."+devCode+"\t"+devPassword);
             //model.addAttribute("msg", "用户名或密码不正确！");
             request.setAttribute("msg", "用户名或密码不正确！");
-            return "/devlogin";
+            return "devlogin";
         }
 
     }
@@ -65,7 +65,13 @@ public class DevUserController {
     public String logout(HttpSession session,
                          HttpServletRequest request)throws Exception{
         session.removeAttribute("devUser");
-        return "/devlogin";
+        return "devlogin";
     }
 
+
+    //跳转到app维护
+    @RequestMapping(value = "/appinfolist")
+    public String appinfolist(){
+        return "developer/appinfolist";
+    }
 }
